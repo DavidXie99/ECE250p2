@@ -168,7 +168,7 @@ void DoubleHashTable<T >::clear() {
 template<typename T >
 void DoubleHashTable<T >::print() const {
     for(int i = 0; i < array_size; i++){
-		cout<<i<<"\t"<<array[i]<<"\t"<<array_state[i]<<"\n";
+		std::cout<<i<<"\t"<<array[i]<<"\t"<<array_state[i]<<"\n";
 	}
 	return;
 }
