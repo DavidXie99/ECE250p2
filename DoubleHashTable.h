@@ -167,7 +167,9 @@ void DoubleHashTable<T >::clear() {
 //Print function won't be tested
 template<typename T >
 void DoubleHashTable<T >::print() const {
-      // enter your implemetation here 	
+    for(int i = 0; i < array_size; i++){
+		cout<<i<<"\t"<<array[i]<<"\t"<<array_state[i]<<"\n";
+	}
 	return;
 }
 
