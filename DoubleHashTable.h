@@ -106,10 +106,10 @@ bool DoubleHashTable<T >::member( T const &obj ) const {
 	int probe = h1(obj);
 	int offset = h2(obj);
 	while (array_state[probe] != EMPTY){
-		probe = (probe + offset)%array_size;
 		if (array_state[probe] == OCCUPIED && array[probe] == obj){
 			return true;
 		}
+		probe = (probe + offset)%array_size;
 	}
 	return false;
 }
@@ -140,12 +140,12 @@ bool DoubleHashTable<T >::remove( T const &obj ) {
 	int probe = h1(obj);
 	int offset = h2(obj);
 	while (array_state[probe] != EMPTY){
-		probe = (probe + offset)%array_size;
 		if (array_state[probe] == OCCUPIED && array[probe] == obj){
 			array_state[probe] = DELETED;
 			count--;
 			return true;
 		}
+		probe = (probe + offset)%array_size;
 	}
 	return false;
 }
